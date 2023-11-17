@@ -18,6 +18,10 @@ export default function Home() {
         <ProgressBar percentage={100}>Rozpoznávání značek</ProgressBar>
         <ProgressBar percentage={25}>Logické myšlení</ProgressBar>
         <ProgressBar percentage={53}>Jazykové dovednosti</ProgressBar>
+        <ProgressBar percentage={0}>Znalost přírody</ProgressBar>
+        <ProgressBar percentage={0}>Pohybové schopnosti</ProgressBar>
+        <ProgressBar percentage={0}>Chuť</ProgressBar>
+        <ProgressBar percentage={0}>Řadicí algoritmy</ProgressBar>
       </div>
     </main>
   );

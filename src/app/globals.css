@@ -17,3 +17,7 @@
 .lime {
   @apply bg-lime-500 h-5 rounded-full;
 }
+
+.none {
+  @apply bg-gray-200 h-5 rounded-full;
+}
