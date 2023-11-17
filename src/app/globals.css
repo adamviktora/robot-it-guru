@@ -2,26 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.red {
+  @apply bg-red-500 h-5 rounded-full;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.orange {
+  @apply bg-orange-500 h-5 rounded-full;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.yellow {
+  @apply bg-yellow-500 h-5 rounded-full;
+}
+
+.lime {
+  @apply bg-lime-500 h-5 rounded-full;
 }

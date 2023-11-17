@@ -1,31 +1,36 @@
-import { FC, PropsWithChildren } from 'react'
+import { FC, PropsWithChildren } from "react";
 
 interface ProgressBarProps {
-  percentage: number
+  percentage: number;
 }
 
 const ProgressBar: FC<PropsWithChildren<ProgressBarProps>> = ({
   percentage,
   children,
 }) => {
+  const color =
+    percentage <= 25
+      ? "red"
+      : percentage <= 50
+      ? "orange"
+      : percentage <= 75
+      ? "yellow"
+      : "lime";
+
   return (
-    <div className="w-80 py-3">
+    <div className="w-80 md:w-[40rem] py-3">
       <div className="flex justify-between mb-1">
-        <span className="text-base font-medium text-blue-700 dark:text-white">
-          {children}
-        </span>
-        <span className="text-sm font-medium text-blue-700 dark:text-white">
-          {percentage}%
-        </span>
+        <span className="font-medium">{children}</span>
+        <span className="font-medium">{percentage}%</span>
       </div>
-      <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+      <div className="w-full bg-gray-200 rounded-full h-5">
         <div
-          className="bg-blue-600 h-2.5 rounded-full"
+          className={color}
           style={{ width: `${percentage}%` }}
         ></div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProgressBar
+export default ProgressBar;
